@@ -12,7 +12,7 @@ for(const personagens  of personagem){
         if(document.getElementsByClassName('selec_persona').length == 0){
             personagens.classList.add('selec_persona');
             hp_personagem = vidaPersonagem;
-            alert(`${nomePersonagem} : ${hp_personagem}`)
+            alert(`Ei ${nomePersonagem}, cuidado com o que vai escolher`)
         }else{
             personagens.classList.remove('selec_persona')
         }
@@ -36,8 +36,8 @@ for(const instrumentos of instrumento){
 const calcular = document.getElementById('Calcular')
 calcular.addEventListener('click', function(){
     if(dano_instrumento >= hp_personagem){
-        alert(`Dano: ${dano_instrumento}! Você matou o inimigo!`)
+        alert(`Dano: ${dano_instrumento}! Você quebrou o Instrumento!`)
     }else{
-        alert(`Dano: ${dano_instrumento}! O inimigo sobreviveu...`)
+        alert(`Dano: ${dano_instrumento}! O instrumento te machucou...`)
     }
 })
