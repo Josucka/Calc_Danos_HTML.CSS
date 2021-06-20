@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Danos - funcional</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <section>
+        <div class="titulo">
+            <h1>Calculadora de danos</h1></div>
+        <div class="titulo"><h2>Selecione o Personagem</h2></div>
+        <div id="elementos">
+        {% for personagem in personagens %}
+            <div class="personagem_elemen" data-nome="{{personagem.nome}}" data-hp="{{personagem.hp}}">
+                <img src="{{personagem.imagem}}" alt="" width="200" height="250">
+                <p>{{personagem.nome}}</p>
+            </div>
+        {% endfor %}  
+        </div>
+        
+        <div class="titulo"><h2>Selecione o Instrumento de Ataque</h2></div>
+        <div id="elementos">
+        {% for instrumento in instrumentos %}
+            <div class="instrumento_elemen" data-nome="{{instrumento.nome}}" data-dano="{{instrumento.dano}}">
+                <img src="{{instrumento.imagem}}" alt="" width="200" height="250">
+                <p>{{instrumento.nome}}</p>
+            </div>
+        {% endfor%}
+        </div>
+        
+        <div class="titulo_resposta">"selecione um personageme a arma"</div>
+        <button id="Calcular" type="button">Calcular dano</button>
+        <footer><h6>Projeto por: <i>Josué Barros</i></h6></footer>
+        <script type="text/javascript" src="/static/index.js"></script>  
+    </section>
+</body>
+</html>
